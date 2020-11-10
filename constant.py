@@ -1,4 +1,3 @@
-N_HEALTH_RECORDS = 5
 
 CITIES = [
     "Iquique", "Antofagasta", "Copiapó", "Arica", 

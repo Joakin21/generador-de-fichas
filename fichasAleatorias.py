@@ -68,8 +68,9 @@ n_collections = archetype_collection.count_documents({})
 archetype_list = archetype_collection.find({}, {"text":1})
 
 health_records = []
+n_health_records = int(input("Ingrese el número de fichas a crear: "))
 
-for ehr in range(constant.N_HEALTH_RECORDS):
+for ehr in range(n_health_records):
     patient_history = {}
     patient_history["_id"] = {"$oid":str(ObjectId())}
     patient_history["nombre"] = names.get_first_name()
@@ -105,6 +106,7 @@ for ehr in range(constant.N_HEALTH_RECORDS):
             medical_session["arquetipos"].append(archetype_for_session)
     
     health_records.append(patient_history)
+    print(str(ehr + 1) + "/" + str(n_health_records))
 
 with open('health_records.json', 'w') as json_file:
     json.dump(health_records, json_file)
