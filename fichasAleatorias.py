@@ -90,7 +90,7 @@ for ehr in range(n_health_records):
         medical_session["nombre_profesional"] = names.get_first_name() + " " + names.get_last_name() + " " + names.get_last_name()
         medical_session["profesion"] = random.choice(constant.HC_PROFESSIONAL_PRACTITIONERS)
         medical_session["centro_salud"] = random.choice(constant.HOSPITALS)
-        medical_session["user_id"] = random.choice(patient_history["profesionales_que_atendieron"])
+        #medical_session["user_id"] = random.choice(patient_history["profesionales_que_atendieron"])
         medical_session["arquetipos"] = []
         patient_history["sesiones_medica"].append(medical_session)
         n_archetype = random.randint(1,5)
