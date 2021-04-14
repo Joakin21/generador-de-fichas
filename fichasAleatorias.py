@@ -101,6 +101,7 @@ for ehr in range(n_health_records):
     patient_history["fecha_nacimiento"] = process_data(randomDate(), option)
     patient_history["ciudad"] = process_data(random.choice(constant.CITIES), option)
     patient_history["es_atendido_ahora"] = False
+    patient_history["activo"] = True
     """
     if option == 1:
         patient_history["profesionales_que_atendieron"] = random.sample(constant.HC_PROFESSIONAL_ID, random.randint(1,len(constant.HC_PROFESSIONAL_ID)))#len(constant.HC_PROFESSIONAL_ID)
